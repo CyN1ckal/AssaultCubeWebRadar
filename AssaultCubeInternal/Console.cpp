@@ -5,6 +5,7 @@ FILE* f;
 void Console::AllocateConsole()
 {
     AllocConsole();
+
     freopen_s(&f, "CONOUT$", "w", stdout);
 }
 

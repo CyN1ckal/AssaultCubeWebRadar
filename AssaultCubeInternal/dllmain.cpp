@@ -5,7 +5,6 @@ bool DLL_Initialized = false;
 bool CheatAlive = true;
 
 HMODULE g_hModule = NULL;
-uintptr_t ModuleBaseAddress = NULL;
 
 DWORD WINAPI StartingThread(HMODULE hModule)
 {
@@ -14,8 +13,6 @@ DWORD WINAPI StartingThread(HMODULE hModule)
    Console::AllocateConsole();
 
    std::cout << "Starting Thread Hit\n";
-
-    ModuleBaseAddress = (uintptr_t)GetModuleHandle(NULL);
 
     std::thread WorkerThread1(MainLoop);
 
