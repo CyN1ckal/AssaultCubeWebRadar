@@ -145,11 +145,13 @@
     <ClInclude Include="InfiniteHealth.h" />
     <ClInclude Include="KeybindLoop.h" />
     <ClInclude Include="MainLoop.h" />
+    <ClInclude Include="Offsets.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="PrintPlayerCoords.h" />
+    <ClInclude Include="PrintPlayerlist.h" />
     <ClInclude Include="Reclass.h" />
     <ClInclude Include="StartingThread.h" />
-    <ClInclude Include="Vector.h" />
+    <ClInclude Include="Vector3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Console.cpp" />
@@ -164,6 +166,7 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
     <ClCompile Include="PrintPlayerCoords.cpp" />
+    <ClCompile Include="PrintPlayerlist.cpp" />
     <ClCompile Include="StartingThread.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

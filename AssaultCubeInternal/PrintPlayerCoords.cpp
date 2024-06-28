@@ -3,7 +3,7 @@
 extern Config config;
 
 void PrintPlayerCoords() {
-	LocalPlayer* LocalPlayerAddress = (LocalPlayer*)*(uintptr_t*)(config.ac_clientBaseAddress + 0x10F4F4);
+	LocalPlayer* LocalPlayerAddress = (LocalPlayer*)*(uintptr_t*)(config.ac_clientBaseAddress + Offsets::LocalPlayerOffset);
 
 	printf("\r");
 

@@ -17,6 +17,8 @@ void MainLoop()
             break;
         }
 
+        if (GetAsyncKeyState(VK_INSERT) & 1) PrintPlayerlist();
+
         if(config.bRefreshHealth) RefreshHealth();
 
         if (config.bPrintPlayerCoords) PrintPlayerCoords();

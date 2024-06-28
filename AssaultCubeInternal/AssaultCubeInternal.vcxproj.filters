@@ -16,15 +16,15 @@
     <Filter Include="Features">
       <UniqueIdentifier>{99e803f8-7404-47c5-8d6c-a3ed0c599102}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Reclass+Offsets">
+      <UniqueIdentifier>{426a6b6e-08e2-44be-a83d-033beb15bd5c}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Reclass.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="MainLoop.h">
@@ -39,7 +39,7 @@
     <ClInclude Include="KeybindLoop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Vector.h">
+    <ClInclude Include="Vector3.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="PrintPlayerCoords.h">
@@ -50,6 +50,15 @@
     </ClInclude>
     <ClInclude Include="StartingThread.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="PrintPlayerlist.h">
+      <Filter>Features</Filter>
+    </ClInclude>
+    <ClInclude Include="Reclass.h">
+      <Filter>Reclass+Offsets</Filter>
+    </ClInclude>
+    <ClInclude Include="Offsets.h">
+      <Filter>Reclass+Offsets</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -76,6 +85,9 @@
     </ClCompile>
     <ClCompile Include="StartingThread.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="PrintPlayerlist.cpp">
+      <Filter>Features</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
