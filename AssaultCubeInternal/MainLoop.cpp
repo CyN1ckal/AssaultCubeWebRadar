@@ -4,20 +4,25 @@
 
 extern bool CheatAlive;
 
+extern Config config;
+
 void MainLoop()
 {
+
     std::cout << "Starting Main Loop\n";
+
     while (CheatAlive)
     {
-        std::cout << "Main Loop\n";
 
-        Sleep(1000);
+        if(config.bRefreshHealth) RefreshHealth();
 
-        RefreshHealth();
+        if (config.bPrintPlayerCoords) PrintPlayerCoords();
 
         if (GetAsyncKeyState(VK_END) & 1)
         {
             CheatAlive = false;
         }
+
     }
+
 }

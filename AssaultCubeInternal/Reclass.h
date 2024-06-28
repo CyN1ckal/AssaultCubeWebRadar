@@ -1,8 +1,6 @@
 #pragma once
-#include "pch.h"
 
 // Created with ReClass.NET 1.2 by KN4CK3R
-
 class LocalPlayer
 {
 public:

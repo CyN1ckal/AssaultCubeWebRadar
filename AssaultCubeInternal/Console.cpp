@@ -6,6 +6,8 @@ void Console::AllocateConsole()
 {
     AllocConsole();
 
+    Sleep(50);
+
     freopen_s(&f, "CONOUT$", "w", stdout);
 }
 

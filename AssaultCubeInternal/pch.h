@@ -13,7 +13,14 @@
 #include <thread>
 
 #include "Vector.h"
+#include "Config.h"
 #include "MainLoop.h"
 #include "Console.h"
+#include "KeybindLoop.h"
+
+#include "Reclass.h"
+
 #include "InfiniteHealth.h"
+#include "PrintPlayerCoords.h"
+
 #endif //PCH_H

@@ -1,38 +1,49 @@
 // dllmain.cpp : Defines the entry point for the DLL application.
 #include "pch.h"
 
-bool DLL_Initialized = false;
-bool CheatAlive = true;
-
+// Global variables
 HMODULE g_hModule = NULL;
 
+bool Console_Initialized = false;
+
+bool CheatAlive = true;
+
+Config config;
+
+// Starting Thread
 DWORD WINAPI StartingThread(HMODULE hModule)
 {
-    DLL_Initialized = true;
-
    Console::AllocateConsole();
+ 
+   Console_Initialized = true;
 
-   std::cout << "Starting Thread Hit\n";
+   config.Initialize();
+
+   Sleep(100);
 
     std::thread WorkerThread1(MainLoop);
 
+    std::thread WorkerThread2(KeybindLoop);
+
     while (CheatAlive)
     {
-        std::cout << "Starting Thread Loop" << std::endl;
-        Sleep(1000);
+
     }
 
     std::cout << "Cheat Dead\n";
 
     WorkerThread1.join();
 
-    // Reminder; this will end up calling the DLL main function. We can do further cleanup from there.
+    WorkerThread2.join();
+
+    // Reminder; this will end up calling the DllMain function. We can do further cleanup from there.
     FreeLibraryAndExitThread(g_hModule, NULL);
 
     return 0;
+
 }
 
-
+// DllMain
 BOOL APIENTRY DllMain( HMODULE hModule,
                        DWORD  ul_reason_for_call,
                        LPVOID lpReserved
@@ -46,16 +57,16 @@ BOOL APIENTRY DllMain( HMODULE hModule,
         CreateThread(nullptr, 0, (LPTHREAD_START_ROUTINE)StartingThread, hModule, 0, NULL);
         break;
     case DLL_THREAD_ATTACH:
-        if (!DLL_Initialized) break;
-        std::cout << "Thread Attach" << std::endl;
+        if (!Console_Initialized) break;
+        std::cout << "DLL_THREAD_ATTACH" << std::endl;
         break;
     case DLL_THREAD_DETACH:
-        if (!DLL_Initialized) break;
-        std::cout << "Thread Detach" << std::endl;
+        if (!Console_Initialized) break;
+        std::cout << "DLL_THREAD_DETACH" << std::endl;
         break;
     case DLL_PROCESS_DETACH:
-        if (!DLL_Initialized) break;
-        std::cout << "Process Detaching" << std::endl;
+        if (!Console_Initialized) break;
+        std::cout << "DLL_PROCESS_DETACH" << std::endl;
         Console::DetachConsole();
         break;
     }
