@@ -27,10 +27,10 @@ DWORD WINAPI StartingThread(HMODULE hModule)
 
     while (CheatAlive)
     {
-
+        Sleep(10);
     }
 
-    std::cout << "Cheat Dead\n";
+    printf("Cheat Dead\n");
 
     WorkerThread1.join();
 
