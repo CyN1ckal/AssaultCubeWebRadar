@@ -22,5 +22,6 @@
 
 #include "InfiniteHealth.h"
 #include "PrintPlayerCoords.h"
+#include "StartingThread.h"
 
 #endif //PCH_H

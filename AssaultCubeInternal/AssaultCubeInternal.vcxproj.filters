@@ -48,6 +48,9 @@
     <ClInclude Include="InfiniteHealth.h">
       <Filter>Features</Filter>
     </ClInclude>
+    <ClInclude Include="StartingThread.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -70,6 +73,9 @@
     </ClCompile>
     <ClCompile Include="PrintPlayerCoords.cpp">
       <Filter>Features</Filter>
+    </ClCompile>
+    <ClCompile Include="StartingThread.cpp">
+      <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
