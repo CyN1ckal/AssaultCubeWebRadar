@@ -2,6 +2,8 @@
 
 // Created with ReClass.NET 1.2 by KN4CK3R
 
+// Created with ReClass.NET 1.2 by KN4CK3R
+
 class LocalPlayer
 {
 public:
@@ -16,8 +18,10 @@ public:
 	int32_t PlayerArmor; //0x00FC
 	char pad_0100[293]; //0x0100
 	char Name[16]; //0x0225
-	char pad_0235[63]; //0x0235
-}; //Size: 0x0274
+	char pad_0235[247]; //0x0235
+	int32_t TeamID; //0x032C
+	char pad_0330[68]; //0x0330
+}; //Size: 0x0374
 
 class EntityList
 {

@@ -26,7 +26,7 @@ void KeybindLoop()
 
 		if (GetAsyncKeyState(VK_CONTROL) & 1)
 		{
-			TestPostRequest();
+			PrintPlayerlistAndSendJSON();
 		}
 
 	}

@@ -1,13 +1,13 @@
 #include "pch.h"
 
-void TestPostRequest()
+void jsonPostRequest()
 {
     try
     {
         http::Request request{ "http://10.0.0.3:3000/" };
-        const std::string body = "foo=1&bar=baz";
+        const std::string body = "{\"foo\": 1, \"bar\": \"baz\"}";
         const auto response = request.send("POST", body, {
-            {"Content-Type", "application/x-www-form-urlencoded"}
+            {"Content-Type", "application/json"}
             });
         std::cout << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
     }
