@@ -6,6 +6,7 @@ struct Config
 
 	bool bRefreshHealth = false;
 	bool bPrintPlayerCoords = false;
+	bool bSendRadarData = false;
 
 	void Initialize()
 	{

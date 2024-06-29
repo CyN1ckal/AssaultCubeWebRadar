@@ -18,15 +18,10 @@ void KeybindLoop()
 			printf("Toggled Refresh Health: %d\n", config.bRefreshHealth);
 		}
 
-		if (GetAsyncKeyState(VK_PRIOR) & 1)
+		if (GetAsyncKeyState(VK_INSERT) & 1)
 		{
-			config.bPrintPlayerCoords = !config.bPrintPlayerCoords;
-			printf("Toggled Print Player Coords: %d\n", config.bPrintPlayerCoords);
-		}
-
-		if (GetAsyncKeyState(VK_CONTROL) & 1)
-		{
-			PrintPlayerlistAndSendJSON();
+			config.bSendRadarData = !config.bSendRadarData;
+			printf("Toggled Radar Data: %d\n", config.bSendRadarData);
 		}
 
 	}
