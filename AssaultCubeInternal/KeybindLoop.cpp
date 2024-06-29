@@ -24,6 +24,11 @@ void KeybindLoop()
 			printf("Toggled Print Player Coords: %d\n", config.bPrintPlayerCoords);
 		}
 
+		if (GetAsyncKeyState(VK_CONTROL) & 1)
+		{
+			TestPostRequest();
+		}
+
 	}
 
 }

@@ -13,11 +13,14 @@
 #include <thread>
 #include <vector>
 
+#include "HTTPRequest.hpp"
+
 #include "Vector3.h"
 #include "Config.h"
 #include "MainLoop.h"
 #include "Console.h"
 #include "KeybindLoop.h"
+#include "HTTPRequests.h"
 
 #include "Reclass.h"
 #include "Offsets.h"
