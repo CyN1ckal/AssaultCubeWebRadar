@@ -1,0 +1,7 @@
+.PlayerDiv
+{
+    background-color: red;
+    width: 5px;
+    height: 5px;
+    position: fixed;
+}

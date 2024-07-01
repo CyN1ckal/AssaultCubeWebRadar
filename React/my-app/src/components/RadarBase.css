@@ -1,0 +1,26 @@
+#RadarBase
+{
+    width: 500px;
+    height: 500px;
+    background-color: gray;
+}
+
+#VerticalGrid
+{
+    position:fixed;
+    top:0;
+    left:249px;
+    width: 3px;
+    height: 500px;
+    background-color: black;
+}
+
+#HorizontalGrid
+{
+    position:fixed;
+    top:249px;
+    left:0;
+    width: 500px;
+    height: 3px;
+    background-color: black;
+}

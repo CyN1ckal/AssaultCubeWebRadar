@@ -40,9 +40,22 @@
     <Content Include="my-app\public\manifest.json" />
     <Content Include="my-app\public\robots.txt" />
     <Content Include="my-app\README.md" />
-    <Content Include="my-app\src\App.js" />
+    <Content Include="my-app\src\components\App.jsx" />
+    <Content Include="my-app\src\components\ColoredText.css" />
+    <Content Include="my-app\src\components\ColoredText.jsx" />
+    <Content Include="my-app\src\components\ComponentsFromArray.jsx" />
+    <Content Include="my-app\src\components\DrawPlayers.css" />
+    <Content Include="my-app\src\components\DrawPlayers.jsx" />
+    <Content Include="my-app\src\components\MovingDotOnCanvas.css" />
+    <Content Include="my-app\src\components\MovingDotOnCanvas.jsx" />
+    <Content Include="my-app\src\components\RadarBase.css" />
+    <Content Include="my-app\src\components\RadarBase.jsx" />
+    <Content Include="my-app\src\components\RefreshingDots.jsx" />
+    <Content Include="my-app\src\components\RefreshingDots2.jsx" />
     <Content Include="my-app\src\index.css" />
-    <Content Include="my-app\src\index.js" />
+    <Content Include="my-app\src\index.jsx" />
+    <Content Include="my-app\src\reportWebVitals.js" />
+    <Content Include="my-app\src\setupTests.js" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="my-app\" />
@@ -919,6 +932,7 @@
     <Folder Include="my-app\node_modules\yocto-queue\" />
     <Folder Include="my-app\public\" />
     <Folder Include="my-app\src\" />
+    <Folder Include="my-app\src\components\" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
 </Project>
