@@ -81,7 +81,7 @@ void PrintPlayerlistAndSendString() {
 
 	try
 	{
-		http::Request request{ "http://10.0.0.3:3000" };
+		http::Request request{ "http://localhost:3000" };
 		const std::string body = AllEntInformationString;
 		const auto response = request.send("POST", body, {
 			{"Content-Type", "application/x-www-form-urlencoded"}
