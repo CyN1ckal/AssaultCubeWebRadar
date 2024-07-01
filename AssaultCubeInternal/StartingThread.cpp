@@ -6,6 +6,7 @@ Config config;
 
 extern HMODULE g_hModule;
 
+
 // Starting Thread
 DWORD WINAPI StartingThread(HMODULE hModule)
 {
@@ -13,7 +14,7 @@ DWORD WINAPI StartingThread(HMODULE hModule)
 
     Console_Initialized = true;
 
-    config.Initialize();
+    config.GetModuleBaseAddress();
 
     Sleep(100);
 
@@ -23,7 +24,8 @@ DWORD WINAPI StartingThread(HMODULE hModule)
 
     while (CheatAlive)
     {
-        Sleep(10);
+        SendPlayerData();
+        Sleep(25);
     }
 
     printf("Cheat Dead\n");
@@ -31,6 +33,7 @@ DWORD WINAPI StartingThread(HMODULE hModule)
     WorkerThread1.join();
 
     WorkerThread2.join();
+
 
     // Reminder; this will end up calling the DllMain function. We can do further cleanup from there.
     FreeLibraryAndExitThread(g_hModule, NULL);

@@ -37,6 +37,10 @@ void MainLoop()
 			//	}, std::chrono::milliseconds(500));
 		}
 
+		if (GetAsyncKeyState(VK_DELETE) & 1)
+		{
+		}
+
 	}
 
 }

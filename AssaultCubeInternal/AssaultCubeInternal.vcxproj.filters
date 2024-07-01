@@ -63,6 +63,9 @@
     <ClInclude Include="HTTPRequests.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="TestingOutput.h">
+      <Filter>Features</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -94,6 +97,9 @@
     </ClCompile>
     <ClCompile Include="HTTPRequests.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TestingOutput.cpp">
+      <Filter>Features</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

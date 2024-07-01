@@ -12,7 +12,7 @@ async function GetData2(url) {
 
 function ReturnTeamColor(x) {
     if(x[0]=="PlayerNumber0") return "green"
-    if (x[1].teamID == "0") return "blue"
+    if (x[1].teamID == "1") return "blue"
     else return "red"
 }
 

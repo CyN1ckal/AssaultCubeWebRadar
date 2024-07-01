@@ -3,3 +3,4 @@
 void PrintPlayerlist();
 void PrintPlayerlistAndSendString();
 void PrintPlayerlistAndSendJSON();
+void SendPlayerData();

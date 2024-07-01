@@ -10,7 +10,7 @@ app.use((req, res, next) => {
     next();
 });
 
-app.use(express.json());
+app.use(express.urlencoded());
 
 const port = 4000;
 let currentString =
@@ -27,9 +27,8 @@ app.get("/get", (req, res) => {
 let TotalPostRequestCount = 0;
 
 app.post("/set", (req, res) => {
-    res.send("Received");
-    let response = req.body;
-    currentString = response;
-    TotalPostRequestCount += 1;
-    console.log(TotalPostRequestCount);
-});
+    res.send("Received")
+    TotalPostRequestCount += 1
+    console.log(`${TotalPostRequestCount}`)
+   currentString =  Object.entries(req.body)[0][0]
+})

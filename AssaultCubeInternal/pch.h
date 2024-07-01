@@ -30,4 +30,8 @@
 #include "StartingThread.h"
 #include "PrintPlayerlist.h"
 
+#include "TestingOutput.h"
+
+#include <curl/curl.h>
+
 #endif //PCH_H
