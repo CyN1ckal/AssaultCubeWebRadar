@@ -13,7 +13,6 @@ app.use((req, res, next) => {
 app.use(express.json());
 
 const port = 4000;
-
 let currentString =
     '{"playerlist":{"PlayerNumber0":{"x":"0","y":"0","yaw":"0","pitch":"0","teamID":"0"}}}';
 
@@ -25,9 +24,12 @@ app.get("/get", (req, res) => {
     res.send(currentString);
 });
 
+let TotalPostRequestCount = 0;
+
 app.post("/set", (req, res) => {
     res.send("Received");
     let response = req.body;
-    console.log(req.body);
     currentString = response;
+    TotalPostRequestCount += 1;
+    console.log(TotalPostRequestCount);
 });

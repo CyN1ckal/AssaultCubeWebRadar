@@ -149,7 +149,7 @@ void PrintPlayerlistAndSendJSON() {
 
 	AllEntInformationString.append("}}");
 
-	std::cout << AllEntInformationString << std::endl;
+	//std::cout << AllEntInformationString << std::endl;
 
 	// Sending the HTTP Request
 	try
@@ -158,7 +158,8 @@ void PrintPlayerlistAndSendJSON() {
 		const std::string body = AllEntInformationString;
 		const auto response = request.send("POST", body, {
 			{"Content-Type", "application/json"}
-			});
+			}, std::chrono::milliseconds(500));
+		
 		std::cout << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
 	}
 	catch (const std::exception& e)
