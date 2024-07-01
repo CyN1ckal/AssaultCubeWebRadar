@@ -119,8 +119,7 @@ void PrintPlayerlistAndSendJSON() {
 		.append(std::to_string(PlayerBaseAddress->ViewAngles.y))
 		.append("\",\"teamID\":\"")
 		.append(std::to_string(PlayerBaseAddress->TeamID))
-		.append("\"},")
-		;
+		.append("\"},");
 
 	// Looping through entity list and preparing JSON
 	for (int i = 1; i < PlayerCount; i++)
@@ -150,17 +149,17 @@ void PrintPlayerlistAndSendJSON() {
 
 	AllEntInformationString.append("}}");
 
-	//std::cout << AllEntInformationString << std::endl;
+	std::cout << AllEntInformationString << std::endl;
 
 	// Sending the HTTP Request
 	try
 	{
-		http::Request request{ "http://10.0.0.3:3000/set" };
+		http::Request request{ "http://10.0.0.3:4000/set" };
 		const std::string body = AllEntInformationString;
 		const auto response = request.send("POST", body, {
 			{"Content-Type", "application/json"}
 			});
-		//std::cout << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
+		std::cout << std::string{ response.body.begin(), response.body.end() } << '\n'; // print the result
 	}
 	catch (const std::exception& e)
 	{
