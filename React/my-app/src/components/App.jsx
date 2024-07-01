@@ -15,7 +15,7 @@ function App() {
   const [ListItems, SetListItems] = useState([]);
 
   async function UpdatePlayerArray() {
-    let JsonString = await GetData2("http://10.0.0.3:4000/get");
+    let JsonString = await GetData2("http://localhost:4000/get");
     let JsonObj = Object.entries(Object.entries(JSON.parse(JsonString))[0][1]);
 
     console.log(JsonObj);
@@ -43,19 +43,9 @@ function App() {
     UpdatePlayerArray();
   }, [PlayerArray]);
 
-  const numbers = [1, 2, 3, 4, 5];
-
-  const listItems = numbers.map((numbers) => (
-    <>
-      <li>{numbers}</li>
-    </>
-  ));
-
   if (Object.entries(PlayerArray).length < 1) return <h1>NoPlayerData</h1>;
 
-  console.log(listItems);
-
-  const listItems2 = PlayerArray.map((x) => (
+  const listItems = PlayerArray.map((x) => (
     <div
       className="PlayerDiv"
       key={x[0]}
@@ -66,7 +56,7 @@ function App() {
   return (
     <>
       <RadarBase />
-      <div>{listItems2}</div>
+      <div>{listItems}</div>
     </>
   );
 }

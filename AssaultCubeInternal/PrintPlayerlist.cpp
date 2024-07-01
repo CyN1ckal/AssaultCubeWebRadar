@@ -154,7 +154,7 @@ void PrintPlayerlistAndSendJSON() {
 	// Sending the HTTP Request
 	try
 	{
-		http::Request request{ "http://10.0.0.3:4000/set" };
+		http::Request request{ "http://localhost:4000/set" };
 		const std::string body = AllEntInformationString;
 		const auto response = request.send("POST", body, {
 			{"Content-Type", "application/json"}
