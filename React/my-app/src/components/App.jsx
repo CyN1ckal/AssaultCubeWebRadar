@@ -11,13 +11,9 @@ async function SimpleTextFetch(url) {
 }
 
 function ReturnTeamColor(x) {
-    if(x[0]=="PlayerNumber0") return "green"
-    if (x[1].teamID == "1") return "blue"
+    if(x[0]==="PlayerNumber0") return "green"
+    if (x[1].teamID === "1") return "blue"
     else return "red"
-}
-
-function TranslatePlayerArray(OriginalPlayerArray) {
-    console.log(OriginalPlayerArray)
 }
 
 function App() {
@@ -36,17 +32,22 @@ function App() {
 
     if (Object.entries(PlayerArray).length < 1) return <h1>NoPlayerData</h1>;
 
+    let LocalPlayerInfo = PlayerArray[0]
+
+    console.log(LocalPlayerInfo)    
+
     const listItems = PlayerArray.map((x) => (
         //<div
         //    className="PlayerDiv"
         //    key={x[0]}
         //    style={{ top: parseFloat(x[1].x), left: parseFloat(x[1].y), backgroundColor: `${ReturnTeamColor(x)}` }}
         // />
-        <PlayerObject PlayerEntry={x} />
+        <PlayerObject PlayerEntry={x} LocalPlayerInfo={LocalPlayerInfo} />
     ));
 
   return (
-    <>
+      <>
+      <RadarBase/>
       <div>{listItems}</div>
     </>
   );

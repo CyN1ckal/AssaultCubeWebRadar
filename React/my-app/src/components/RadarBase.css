@@ -9,8 +9,8 @@
 {
     position:fixed;
     top:0;
-    left:249px;
-    width: 3px;
+    left:250px;
+    width: 1px;
     height: 500px;
     background-color: black;
 }
@@ -18,9 +18,9 @@
 #HorizontalGrid
 {
     position:fixed;
-    top:249px;
+    top:250px;
     left:0;
     width: 500px;
-    height: 3px;
+    height: 1px;
     background-color: black;
 }

@@ -7,6 +7,6 @@ void NetworkingLoop()
 	while (CheatAlive)
 	{
 		SendPlayerData();
-		Sleep(100);
+		Sleep(25);
 	}
 }

@@ -5,20 +5,42 @@ function ReturnTeamColor(x) {
     else return "red"
 }
 
+function NormalizeAroundPlayer0(CurrentPlayerInfo, LocalPlayerInfo) {
 
-function PlayerObject(PlayerEntry) {
+    let NormalizedCurrentPlayer = structuredClone(CurrentPlayerInfo);
+
+    NormalizedCurrentPlayer[1].x = CurrentPlayerInfo[1].x-LocalPlayerInfo[1].x
+    NormalizedCurrentPlayer[1].y = CurrentPlayerInfo[1].y-LocalPlayerInfo[1].y
+
+    console.log(NormalizedCurrentPlayer)
+    console.log(CurrentPlayerInfo)
+
+    return NormalizedCurrentPlayer
+}
+
+function PlayerObject({PlayerEntry, LocalPlayerInfo}) {
+
+    let PlayerInfo = PlayerEntry
 
 
-    let PlayerInfo = Object.entries(PlayerEntry)[0][1]
+   let NormalizedPlayerInfo = NormalizeAroundPlayer0(PlayerInfo,LocalPlayerInfo);
 
-    console.log(PlayerInfo)
-
+    //return <>
+    //    <div key={PlayerInfo[0]} className="PlayerBaseDiv" style={{
+    //        left: parseFloat(PlayerInfo[1].x),
+    //        top: parseFloat(PlayerInfo[1].y),
+    //        backgroundColor: `${ReturnTeamColor(PlayerInfo)}`,
+    //        rotate:`${PlayerInfo[1].yaw}deg`
+    //    }} >
+    //        <div className="ViewDirectionDiv" ></div>
+    //    </div>
+    //</>
     return <>
-        <div key={PlayerInfo[0]} className="PlayerBaseDiv" style={{
-            top: parseFloat(PlayerInfo[1].x),
-            left: parseFloat(PlayerInfo[1].y),
-            backgroundColor: `${ReturnTeamColor(PlayerInfo)}`,
-            rotate:`${PlayerInfo[1].yaw}deg`
+        <div key={NormalizedPlayerInfo[0]} className="PlayerBaseDiv" style={{
+            left: parseFloat(NormalizedPlayerInfo[1].x)+248,
+            top: parseFloat(NormalizedPlayerInfo[1].y+248),
+            backgroundColor: `${ReturnTeamColor(NormalizedPlayerInfo)}`,
+            rotate: `${NormalizedPlayerInfo[1].yaw}deg`
         }} >
             <div className="ViewDirectionDiv" ></div>
         </div>
