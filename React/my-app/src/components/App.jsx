@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import DrawPlayers from "./DrawPlayers";
 import RadarBase from "./RadarBase";
 import "./DrawPlayers.css";
-
+import PlayerObject from './Player.jsx'
 // Get request function
 async function SimpleTextFetch(url) {
   let myHeader = new Headers();
@@ -37,16 +37,16 @@ function App() {
     if (Object.entries(PlayerArray).length < 1) return <h1>NoPlayerData</h1>;
 
     const listItems = PlayerArray.map((x) => (
-        <div
-            className="PlayerDiv"
-            key={x[0]}
-            style={{ top: parseFloat(x[1].x), left: parseFloat(x[1].y), backgroundColor: `${ReturnTeamColor(x)}` }}
-         />
+        //<div
+        //    className="PlayerDiv"
+        //    key={x[0]}
+        //    style={{ top: parseFloat(x[1].x), left: parseFloat(x[1].y), backgroundColor: `${ReturnTeamColor(x)}` }}
+        // />
+        <PlayerObject PlayerEntry={x} />
     ));
 
   return (
     <>
-      <RadarBase />
       <div>{listItems}</div>
     </>
   );

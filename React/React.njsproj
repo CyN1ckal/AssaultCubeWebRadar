@@ -48,6 +48,8 @@
     <Content Include="my-app\src\components\DrawPlayers.jsx" />
     <Content Include="my-app\src\components\MovingDotOnCanvas.css" />
     <Content Include="my-app\src\components\MovingDotOnCanvas.jsx" />
+    <Content Include="my-app\src\components\Player.css" />
+    <Content Include="my-app\src\components\Player.jsx" />
     <Content Include="my-app\src\components\RadarBase.css" />
     <Content Include="my-app\src\components\RadarBase.jsx" />
     <Content Include="my-app\src\components\RefreshingDots.jsx" />
