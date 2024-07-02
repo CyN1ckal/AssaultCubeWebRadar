@@ -27,26 +27,14 @@
     <ClInclude Include="pch.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="MainLoop.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Console.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Config.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="KeybindLoop.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Vector3.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="PrintPlayerCoords.h">
-      <Filter>Features</Filter>
-    </ClInclude>
-    <ClInclude Include="InfiniteHealth.h">
-      <Filter>Features</Filter>
     </ClInclude>
     <ClInclude Include="StartingThread.h">
       <Filter>Header Files</Filter>
@@ -60,12 +48,6 @@
     <ClInclude Include="Offsets.h">
       <Filter>Reclass+Offsets</Filter>
     </ClInclude>
-    <ClInclude Include="HTTPRequests.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="TestingOutput.h">
-      <Filter>Features</Filter>
-    </ClInclude>
     <ClInclude Include="NetworkingLoop.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -77,31 +59,13 @@
     <ClCompile Include="pch.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="MainLoop.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Console.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="KeybindLoop.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="InfiniteHealth.cpp">
-      <Filter>Features</Filter>
-    </ClCompile>
-    <ClCompile Include="PrintPlayerCoords.cpp">
-      <Filter>Features</Filter>
     </ClCompile>
     <ClCompile Include="StartingThread.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="PrintPlayerlist.cpp">
-      <Filter>Features</Filter>
-    </ClCompile>
-    <ClCompile Include="HTTPRequests.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="TestingOutput.cpp">
       <Filter>Features</Filter>
     </ClCompile>
     <ClCompile Include="NetworkingLoop.cpp">

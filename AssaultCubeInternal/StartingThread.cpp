@@ -22,8 +22,10 @@ DWORD WINAPI StartingThread(HMODULE hModule)
 
     while (CheatAlive)
     {
-        MainLoop();
-        KeybindLoop();
+        if (GetAsyncKeyState(VK_END) & 1)
+        {
+            CheatAlive = false;
+        }
         Sleep(100);
     }
 

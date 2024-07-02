@@ -17,21 +17,13 @@
 
 #include "Vector3.h"
 #include "Config.h"
-#include "MainLoop.h"
 #include "Console.h"
-#include "KeybindLoop.h"
-#include "HTTPRequests.h"
 
 #include "Reclass.h"
 #include "Offsets.h"
 
-#include "InfiniteHealth.h"
-#include "PrintPlayerCoords.h"
 #include "StartingThread.h"
 #include "PrintPlayerlist.h"
-#
-
-#include "TestingOutput.h"
 
 #include <curl/curl.h>
 #include "NetworkingLoop.h"
