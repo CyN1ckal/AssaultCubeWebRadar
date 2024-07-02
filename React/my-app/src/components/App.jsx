@@ -4,7 +4,7 @@ import RadarBase from "./RadarBase";
 import "./DrawPlayers.css";
 
 // Get request function
-async function GetData2(url) {
+async function SimpleTextFetch(url) {
   let myHeader = new Headers();
   let options = { method: "GET", headers: myHeader, mode: "cors" };
   return fetch(url, options).then((response) => response.text());
@@ -16,14 +16,16 @@ function ReturnTeamColor(x) {
     else return "red"
 }
 
+function TranslatePlayerArray(OriginalPlayerArray) {
+    console.log(OriginalPlayerArray)
+}
+
 function App() {
     const [PlayerArray, SetPlayerArray] = useState([]);
 
     async function UpdatePlayerArray() {
-        let JsonString = await GetData2("http://localhost:4000/get");
+        let JsonString = await SimpleTextFetch("http://localhost:4000/get");
         let JsonObj = Object.entries(Object.entries(JSON.parse(JsonString))[0][1]);
-
-        console.log(JsonObj);
 
         SetPlayerArray(JsonObj);
     }
@@ -39,8 +41,8 @@ function App() {
             className="PlayerDiv"
             key={x[0]}
             style={{ top: parseFloat(x[1].x), left: parseFloat(x[1].y), backgroundColor: `${ReturnTeamColor(x)}` }}
-    ></div>
-  ));
+         />
+    ));
 
   return (
     <>

@@ -18,22 +18,18 @@ DWORD WINAPI StartingThread(HMODULE hModule)
 
     Sleep(100);
 
-    std::thread WorkerThread1(MainLoop);
-
-    std::thread WorkerThread2(KeybindLoop);
+    std::thread NetworkingThread(NetworkingLoop);
 
     while (CheatAlive)
     {
-        SendPlayerData();
-        Sleep(25);
+        MainLoop();
+        KeybindLoop();
+        Sleep(100);
     }
 
     printf("Cheat Dead\n");
 
-    WorkerThread1.join();
-
-    WorkerThread2.join();
-
+    NetworkingThread.join();
 
     // Reminder; this will end up calling the DllMain function. We can do further cleanup from there.
     FreeLibraryAndExitThread(g_hModule, NULL);

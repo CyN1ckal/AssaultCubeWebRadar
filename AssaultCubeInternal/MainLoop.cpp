@@ -7,14 +7,12 @@ extern Config config;
 void MainLoop()
 {
 
-	std::cout << "Starting Main Loop\n";
-
-	while (CheatAlive)
-	{
+	//while (CheatAlive)
+	//{
 		if (GetAsyncKeyState(VK_END) & 1)
 		{
 			CheatAlive = false;
-			break;
+			//break;
 		}
 
 		if (config.bRefreshHealth)
@@ -40,7 +38,7 @@ void MainLoop()
 		if (GetAsyncKeyState(VK_DELETE) & 1)
 		{
 		}
-
-	}
+		//Sleep(1000);
+	//}
 
 }

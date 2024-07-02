@@ -7,10 +7,9 @@ extern Config config;
 void KeybindLoop()
 {
 
-	std::cout << "Starting Keybind Loop\n";
 
-	while (CheatAlive)
-	{
+	//while (CheatAlive)
+	//{
 
 		if (GetAsyncKeyState(VK_HOME) & 1)
 		{
@@ -24,6 +23,6 @@ void KeybindLoop()
 			printf("Toggled Radar Data: %d\n", config.bSendRadarData);
 		}
 
-	}
-
+	//}
+	//Sleep(1000);
 }
